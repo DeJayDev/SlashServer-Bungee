@@ -1,11 +1,12 @@
 package com.minecraftdimensions.slashserver.configlibrary;
 
 public class ConfigurationOptions {
+
     private char pathSeparator = '.';
     private boolean copyDefaults = false;
     private final Configuration configuration;
 
-    protected ConfigurationOptions( Configuration configuration ) {
+    protected ConfigurationOptions(Configuration configuration) {
         this.configuration = configuration;
     }
 
@@ -17,7 +18,7 @@ public class ConfigurationOptions {
         return pathSeparator;
     }
 
-    public ConfigurationOptions pathSeparator( char value ) {
+    public ConfigurationOptions pathSeparator(char value) {
         this.pathSeparator = value;
         return this;
     }
@@ -26,7 +27,7 @@ public class ConfigurationOptions {
         return copyDefaults;
     }
 
-    public ConfigurationOptions copyDefaults( boolean value ) {
+    public ConfigurationOptions copyDefaults(boolean value) {
         this.copyDefaults = value;
         return this;
     }

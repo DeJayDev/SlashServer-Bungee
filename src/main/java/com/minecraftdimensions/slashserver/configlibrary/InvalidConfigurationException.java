@@ -1,18 +1,20 @@
 package com.minecraftdimensions.slashserver.configlibrary;
 
-@SuppressWarnings( "serial" )
+@SuppressWarnings("serial")
 public class InvalidConfigurationException extends Exception {
-    public InvalidConfigurationException() {}
 
-    public InvalidConfigurationException( String msg ) {
-        super( msg );
+    public InvalidConfigurationException() {
     }
 
-    public InvalidConfigurationException( Throwable cause ) {
-        super( cause );
+    public InvalidConfigurationException(String msg) {
+        super(msg);
     }
 
-    public InvalidConfigurationException( String msg, Throwable cause ) {
-        super( msg, cause );
+    public InvalidConfigurationException(Throwable cause) {
+        super(cause);
+    }
+
+    public InvalidConfigurationException(String msg, Throwable cause) {
+        super(msg, cause);
     }
 }

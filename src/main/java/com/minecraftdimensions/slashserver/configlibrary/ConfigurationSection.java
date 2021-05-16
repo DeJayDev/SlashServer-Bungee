@@ -5,93 +5,94 @@ import java.util.Map;
 import java.util.Set;
 
 public interface ConfigurationSection {
-    public Set<String> getKeys( boolean deep );
 
-    public Map<String, Object> getValues( boolean deep );
+    Set<String> getKeys(boolean deep);
 
-    public boolean contains( String path );
+    Map<String, Object> getValues(boolean deep);
 
-    public boolean isSet( String path );
+    boolean contains(String path);
 
-    public String getCurrentPath();
+    boolean isSet(String path);
 
-    public String getName();
+    String getCurrentPath();
 
-    public Configuration getRoot();
+    String getName();
 
-    public ConfigurationSection getParent();
+    Configuration getRoot();
 
-    public Object get( String path );
+    ConfigurationSection getParent();
 
-    public Object get( String path, Object def );
+    Object get(String path);
 
-    public void set( String path, Object value );
+    Object get(String path, Object def);
 
-    public ConfigurationSection createSection( String path );
+    void set(String path, Object value);
 
-    public ConfigurationSection createSection( String path, Map<?, ?> map );
+    ConfigurationSection createSection(String path);
 
-    public String getString( String path );
+    ConfigurationSection createSection(String path, Map<?, ?> map);
 
-    public String getString( String path, String def );
+    String getString(String path);
 
-    public boolean isString( String path );
+    String getString(String path, String def);
 
-    public int getInt( String path );
+    boolean isString(String path);
 
-    public int getInt( String path, int def );
+    int getInt(String path);
 
-    public boolean isInt( String path );
+    int getInt(String path, int def);
 
-    public boolean getBoolean( String path );
+    boolean isInt(String path);
 
-    public boolean getBoolean( String path, boolean def );
+    boolean getBoolean(String path);
 
-    public boolean isBoolean( String path );
+    boolean getBoolean(String path, boolean def);
 
-    public double getDouble( String path );
+    boolean isBoolean(String path);
 
-    public double getDouble( String path, double def );
+    double getDouble(String path);
 
-    public boolean isDouble( String path );
+    double getDouble(String path, double def);
 
-    public long getLong( String path );
+    boolean isDouble(String path);
 
-    public long getLong( String path, long def );
+    long getLong(String path);
 
-    public boolean isLong( String path );
+    long getLong(String path, long def);
 
-    public List<?> getList( String path );
+    boolean isLong(String path);
 
-    public List<?> getList( String path, List<?> def );
+    List<?> getList(String path);
 
-    public boolean isList( String path );
+    List<?> getList(String path, List<?> def);
 
-    public List<String> getStringList( String path );
+    boolean isList(String path);
 
-    public List<Integer> getIntegerList( String path );
+    List<String> getStringList(String path);
 
-    public List<Boolean> getBooleanList( String path );
+    List<Integer> getIntegerList(String path);
 
-    public List<Double> getDoubleList( String path );
+    List<Boolean> getBooleanList(String path);
 
-    public List<Float> getFloatList( String path );
+    List<Double> getDoubleList(String path);
 
-    public List<Long> getLongList( String path );
+    List<Float> getFloatList(String path);
 
-    public List<Byte> getByteList( String path );
+    List<Long> getLongList(String path);
 
-    public List<Character> getCharacterList( String path );
+    List<Byte> getByteList(String path);
 
-    public List<Short> getShortList( String path );
+    List<Character> getCharacterList(String path);
 
-    public List<Map<?, ?>> getMapList( String path );
+    List<Short> getShortList(String path);
 
-    public ConfigurationSection getConfigurationSection( String path );
+    List<Map<?, ?>> getMapList(String path);
 
-    public boolean isConfigurationSection( String path );
+    ConfigurationSection getConfigurationSection(String path);
 
-    public ConfigurationSection getDefaultSection();
+    boolean isConfigurationSection(String path);
 
-    public void addDefault( String path, Object value );
+    ConfigurationSection getDefaultSection();
+
+    void addDefault(String path, Object value);
 }

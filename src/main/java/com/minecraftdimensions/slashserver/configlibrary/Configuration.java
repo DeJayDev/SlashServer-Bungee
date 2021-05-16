@@ -3,15 +3,16 @@ package com.minecraftdimensions.slashserver.configlibrary;
 import java.util.Map;
 
 public interface Configuration extends ConfigurationSection {
-    public void addDefault( String path, Object value );
 
-    public void addDefaults( Map<String, Object> defaults );
+    void addDefault(String path, Object value);
 
-    public void addDefaults( Configuration defaults );
+    void addDefaults(Map<String, Object> defaults);
 
-    public void setDefaults( Configuration defaults );
+    void addDefaults(Configuration defaults);
 
-    public Configuration getDefaults();
+    void setDefaults(Configuration defaults);
 
-    public ConfigurationOptions options();
+    Configuration getDefaults();
+
+    ConfigurationOptions options();
 }

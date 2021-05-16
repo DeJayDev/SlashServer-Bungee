@@ -1,4 +1,0 @@
-name: SlashServer
-main : com.minecraftdimensions.slashserver.SlashServer
-version: 2
-author: Bloodsplat

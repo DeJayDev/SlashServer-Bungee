@@ -3,38 +3,40 @@ package com.minecraftdimensions.slashserver.configlibrary;
 import java.util.Map;
 
 public class MemoryConfiguration extends MemorySection implements Configuration {
+
     protected Configuration defaults;
     protected MemoryConfigurationOptions options;
 
-    public MemoryConfiguration() {}
+    public MemoryConfiguration() {
+    }
 
-    public MemoryConfiguration( Configuration defaults ) {
+    public MemoryConfiguration(Configuration defaults) {
         this.defaults = defaults;
     }
 
     @Override
-    public void addDefault( String path, Object value ) {
+    public void addDefault(String path, Object value) {
 
-        if ( defaults == null ) {
+        if (defaults == null) {
             defaults = new MemoryConfiguration();
         }
 
-        defaults.set( path, value );
+        defaults.set(path, value);
     }
 
-    public void addDefaults( Map<String, Object> defaults ) {
+    public void addDefaults(Map<String, Object> defaults) {
 
-        for ( Map.Entry<String, Object> entry : defaults.entrySet() ) {
-            addDefault( entry.getKey(), entry.getValue() );
+        for (Map.Entry<String, Object> entry : defaults.entrySet()) {
+            addDefault(entry.getKey(), entry.getValue());
         }
     }
 
-    public void addDefaults( Configuration defaults ) {
+    public void addDefaults(Configuration defaults) {
 
-        addDefaults( defaults.getValues( true ) );
+        addDefaults(defaults.getValues(true));
     }
 
-    public void setDefaults( Configuration defaults ) {
+    public void setDefaults(Configuration defaults) {
 
         this.defaults = defaults;
     }
@@ -49,8 +51,8 @@ public class MemoryConfiguration extends MemorySection implements Configuration 
     }
 
     public MemoryConfigurationOptions options() {
-        if ( options == null ) {
-            options = new MemoryConfigurationOptions( this );
+        if (options == null) {
+            options = new MemoryConfigurationOptions(this);
         }
 
         return options;

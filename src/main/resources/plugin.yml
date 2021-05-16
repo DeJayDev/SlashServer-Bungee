@@ -1,4 +1,4 @@
 name: SlashServer
-main : com.minecraftdimensions.slashserver.SlashServer
-version: 3
-author: Bloodsplat
+main: com.minecraftdimensions.slashserver.SlashServer
+version: 4
+author: 'Bloodsplat & DeJayDev'

@@ -16,7 +16,7 @@
 	</properties>
 	
   <build>
-  	<finalName>SlashServer</finalName>
+  	<finalName>SlashServer-Bungee</finalName>
 		<plugins>
 	  	<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
